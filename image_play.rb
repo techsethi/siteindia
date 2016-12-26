@@ -1,0 +1,2 @@
+require 'chunky_png'
+

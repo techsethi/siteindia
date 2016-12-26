@@ -1,8 +1,4 @@
 source 'https://rubygems.org'
-git_source(:github) do |repo_name|
-  repo_name = "
-  "https://github.com/
-end
 ruby '2.3.1'
 gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
@@ -25,8 +21,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'high_voltage'
 gem 'pg'
+
+gem 'omniauth-facebook'
+gem 'chunky_png'
+gem "koala", "~> 2.2"
+
+gem 'httparty'
+
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'hub', :require=>nil
   gem 'rails_layout'
 end
