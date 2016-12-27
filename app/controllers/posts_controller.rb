@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   require 'face'
-  @@client = Face.get_client(api_key: SKYBIOMETRY_KEY, api_secret: SKYBIOMETRY_SECRET)
+  @@client = Face.get_client(api_key: ENV['SKYBIOMETRY_KEY'], api_secret: ENV['SKYBIOMETRY_SECRET'])
 
   def image_info 
   end
