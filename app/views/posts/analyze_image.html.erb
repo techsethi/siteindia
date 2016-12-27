@@ -1,0 +1,30 @@
+
+<% @image["photos"].each do |photo| %>
+
+<div class="card">
+
+  <div class="card card-header">
+  <%= raw "<img src='#{photo["url"]}' width='#{photo["width"]}' height='#{photo["height"]}'>" %>
+  </div>
+
+  <div class="card-group">
+  <% photo["tags"].each do |tag| %>
+
+        <div class="card card-block">
+          <h4 class="card-title">Attributes</h4> <i class="glyphicon glyphicon-ok" aria-hidden="true"></i>
+
+
+
+          <ul class="list-group">
+          <%  tag["attributes"].each do |attribute| %>
+            <%=  raw "<li class='list-group-item'>#{t attribute[0]} : #{attribute[1]["value"]} 
+            <span class='tag tag-default tag-pill float-xs-right' title='Confidence Percent'>#{attribute[1]["confidence"]}</span></li>" %>
+          <% end %>
+          </ul>
+
+        </div>
+  <% end %>
+  </div>
+
+</div>
+<% end %>

@@ -27,6 +27,7 @@ gem 'chunky_png'
 gem "koala", "~> 2.2"
 
 gem 'httparty'
+gem 'face'
 
 group :development do
   gem 'better_errors'
