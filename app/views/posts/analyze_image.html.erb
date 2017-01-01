@@ -1,21 +1,24 @@
 <%= content_for(:title, "Detect Faces, Gender, Age & Mood Attributes in any picture - SiteIndia") %>
 
+
+
 <% @image["photos"].each do |photo| %>
 
 <div class="card">
 
   <div class="card card-header">
-  <%= raw "<img src='#{photo["url"]}' width='#{photo["width"]}' height='#{photo["height"]}'>" %>
+    <img src="/posts/analyzed_image_path?image_url=<%= CGI.escape params[:image_url] %>">
   </div>
 
 <%= render 'social_share_code' %>
 
   <a href='/posts/image_info'>Select a new image</a>
   <div class="card-group">
-  <% photo["tags"].each do |tag| %>
+  <% colors = ["red", "green", "yellow", "blue"] %>
+  <% photo["tags"].each_with_index do |tag, index| %>
 
         <div class="card card-block">
-          <h4 class="card-title">Attributes</h4> <i class="glyphicon glyphicon-ok" aria-hidden="true"></i>
+          <h4 class="card-title"><span style='color: <%= colors[index % 4] %>;'>Attributes</span></h4> <i class="glyphicon glyphicon-ok" aria-hidden="true"></i>
 
 
 

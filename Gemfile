@@ -23,7 +23,7 @@ gem 'high_voltage'
 gem 'pg'
 
 gem 'omniauth-facebook'
-gem 'chunky_png'
+gem 'mini_magick'
 gem "koala", "~> 2.2"
 
 gem 'httparty'
@@ -34,6 +34,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'hub', :require=>nil
   gem 'rails_layout'
+  gem 'pry'
 end
 group :production do
   gem 'unicorn'

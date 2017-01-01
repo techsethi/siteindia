@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/posts/image_info', to: 'posts#image_info'
   get '/posts/analyze_image', to: 'posts#analyze_image'
   post '/posts/analyze_image', to: 'posts#analyze_image'
+  get '/posts/analyzed_image_path', to: 'posts#analyzed_image_path'
 end
